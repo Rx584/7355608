@@ -91,9 +91,9 @@
        </widget>
       </item>
       <item row="3" column="0">
-       <widget class="QPushButton" name="back">
+       <widget class="QPushButton" name="disbomb">
         <property name="text">
-         <string>退格</string>
+         <string>拆弹</string>
         </property>
        </widget>
       </item>
