@@ -23,7 +23,7 @@
      <widget class="QLCDNumber" name="time"/>
     </item>
     <item>
-     <widget class="QLineEdit" name="password"/>
+     <widget class="QLCDNumber" name="password"/>
     </item>
     <item>
      <layout class="QGridLayout" name="gridLayout">
@@ -105,7 +105,7 @@
        </widget>
       </item>
       <item row="3" column="2">
-       <widget class="QPushButton" name="pushButton_12">
+       <widget class="QPushButton" name="set_bomb">
         <property name="text">
          <string>设置密码</string>
         </property>
