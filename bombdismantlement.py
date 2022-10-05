@@ -75,7 +75,7 @@ class BombDis(QMainWindow,Ui_Bombdismantlement):
             self.update_password()
             self.timer.start(1000)
     def update_time(self):
-        if self.retime <=0:
+        if self.remtime <=0:
             QMessageBox.information(self,"yui~a~Boom!","拆弹失败，电脑将在5秒后关机")
             self.shutdown()
         self.remtime -=1
