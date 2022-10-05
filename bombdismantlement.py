@@ -2,6 +2,7 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from ui_bombdismantlement import *
+import os
 import sys
 
 class BombDis(QMainWindow,Ui_Bombdismantlement):
@@ -74,6 +75,9 @@ class BombDis(QMainWindow,Ui_Bombdismantlement):
             self.update_password()
             self.timer.start(1000)
     def update_time(self):
+        if self.retime <=0:
+            QMessageBox.information(self,"yui~a~Boom!","拆弹失败，电脑将在5秒后关机")
+            self.shutdown()
         self.remtime -=1
         self.time.display(self.remtime)
     def dis_bomb(self):
@@ -97,6 +101,8 @@ class BombDis(QMainWindow,Ui_Bombdismantlement):
             QMessageBox.information(self,"错误","错误的拆弹密码")
             self.password_ = ""
             self.update_password()
+    def shutdown(self):
+        os.system("shutdown -s -t 5")
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = BombDis()
